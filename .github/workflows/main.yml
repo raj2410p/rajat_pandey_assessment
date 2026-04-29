@@ -47,9 +47,9 @@ jobs:
 
     - name: Update image tags
       run: |
-        sed -i 's|image: .*/ai-backend:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-backend:${{ github.sha }}|' infra/k8s/backend.yaml
-        sed -i 's|image: .*/ai-worker:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-worker:${{ github.sha }}|' infra/k8s/worker.yaml
-        sed -i 's|image: .*/ai-frontend:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-frontend:${{ github.sha }}|' infra/k8s/frontend.yaml
+        sed -i 's|image: .*ai-backend:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-backend:${{ github.sha }}|' infra/k8s/backend.yaml
+        sed -i 's|image: .*ai-worker:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-worker:${{ github.sha }}|' infra/k8s/worker.yaml
+        sed -i 's|image: .*ai-frontend:.*|image: ${{ secrets.DOCKERHUB_USERNAME }}/ai-frontend:${{ github.sha }}|' infra/k8s/frontend.yaml
         git config user.name github-actions
         git config user.email github-actions@github.com
         git add .
