@@ -7,7 +7,6 @@ spec:
   project: default
   source:
     repoURL: https://github.com/raj2410p/rajat_pandey_assessment
-
     targetRevision: HEAD
     path: infra/k8s
   destination:
